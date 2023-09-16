@@ -1,0 +1,172 @@
+/* ---- RESET DE ESTILOS ---- */
+/* Selecciona todos los elementos y elimina márgenes y rellenos. Esto asegura una base más uniforme en diferentes navegadores. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Hace que el relleno y el borde se incluyan en el tamaño total del elemento. */
+    font-family: 'Arial', sans-serif; /* Establece una fuente predeterminada para todo el sitio. */
+}
+
+/* Estilos para el menú */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra verticalmente los ítems en su contenedor */
+    background-color: #333;
+    list-style-type: none;
+    padding: 10px 0; /* Agrega un poco de relleno superior e inferior */
+}
+
+.menu li {
+    margin: 0 20px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px; /* Reduce el relleno para un botón más pequeño */
+    transition: background-color 0.3s;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+
+.menu a:hover {
+    background-color: #555;
+}
+
+/* Estiliza el cuerpo del documento */
+body {
+    background-color: #f4f4f4; /* Color de fondo claro */
+    color: #333; /* Color de texto oscuro */
+    font-size: 16px; /* Tamaño de fuente base */
+    line-height: 1.5; /* Espaciado entre líneas de texto */
+}
+
+/* Estiliza el encabezado del sitio */
+header {
+    background-color: #333; 
+    color: #fff; 
+    text-align: center; /* Centra el contenido textual */
+    padding: 1rem 0; /* Relleno arriba y abajo */
+}
+
+/* Estiliza la barra de navegación (aunque actualmente está vacía) */
+nav {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+/* Estiliza la sección donde los usuarios pueden filtrar productos */
+#product-filter {
+    margin: 2rem 0; /* Margen arriba y abajo */
+}
+
+/* Estiliza la caja de búsqueda */
+#search-box {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd; 
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estiliza la grilla de productos */
+#products {
+    display: grid; /* Usa un diseño de grilla */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Define columnas que se adaptan al tamaño de pantalla */
+    gap: 1rem; /* Espacio entre productos */
+    padding: 1rem;
+}
+
+/* Estiliza cada producto individualmente (como un ejemplo) */
+.product-item {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #fff; 
+    text-align: center;
+    width: 200px; /* Un ancho fijo para los ítems */
+}
+
+#products {
+    display: flex;              /* Habilita flexbox */
+    flex-wrap: wrap;            /* Permite que los ítems se envuelvan a la siguiente línea si no hay espacio */
+    justify-content: center;    /* Centra los ítems horizontalmente */
+    align-items: center;        /* Centra los ítems verticalmente */
+    gap: 1rem;                  /* Espacio entre productos */
+    padding: 1rem;
+}
+
+
+#product-list {
+    display: flex;
+    justify-content: center; /* Centra los ítems horizontalmente */
+    gap: 1rem; /* Añade un espacio entre los ítems */
+    flex-wrap: wrap; /* Permite que los ítems pasen a la siguiente línea si no hay espacio */
+}
+
+/* Estiliza el pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Estiliza enlaces para darles un color específico y eliminar el subrayado predeterminado */
+a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+/* Cambia el estilo de los enlaces al pasar el mouse sobre ellos */
+a:hover {
+    text-decoration: underline;
+}
+
+img.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+/* -------------------------- ESTILOS RESPONSIVE ------------------------------------- */
+
+/* Estilos que se aplican cuando el ancho de la pantalla es de 600px o menos (típicamente, teléfonos móviles en modo retrato) */
+@media (max-width: 600px) {
+
+    /* Ajusta el menú para que sea más adecuado para dispositivos móviles */
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu li {
+        margin: 5px 0;
+    }
+
+    .menu a {
+        padding: 10px;
+        text-align: center;
+        width: 100%; /* Ocupa todo el ancho disponible para facilitar la pulsación en pantallas táctiles */
+    }
+
+    /* Ajusta los productos para que se muestren en una sola columna */
+    #product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-item {
+        width: 90%; /* Ajusta según prefieras */
+        margin-bottom: 10px;
+    }
+}
+
+/* Estilos que se aplican cuando el ancho de la pantalla está entre 601px y 900px (típicamente, tablets y teléfonos móviles en modo paisaje) */
+@media (min-width: 601px) and (max-width: 900px) {
+    
+    /* Aquí puedes hacer ajustes específicos para tablets si es necesario */
+
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JR SHOP 🛒</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Estilos CSS -->
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>JR SHOP Colombia</h1>
+    </header>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="javascript:void(0)" onclick="loadPage('home')">Inicio</a></li>
+            <li><a href="javascript:void(0)" onclick="loadPage('products')">Productos</a></li>
+            <li><a href="javascript:void(0)" onclick="loadPage('about')">Acerca de</a></li>
+            <li><a href="javascript:void(0)" onclick="loadPage('contact')">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Div donde se cargará el contenido dinámico -->
+    <div id="page-content"></div>
+
+    <!-- Sección de Productos (inicialmente oculta) -->
+    <div id="product-section" style="display: none;">
+        <!-- <section id="product-filter"> //Filtrar productos, omitido temporalmente.
+            <h2>Filtrar Productos</h2>
+            <input type="text" id="search-box" placeholder="Buscar producto...">
+        </section>
+
+        <section id="product-list">
+            <div class="product-item" data-product-name="Laptop XYZ">Laptop XYZ</div>
+            <div class="product-item" data-product-name="Teléfono ABC">Teléfono ABC</div>
+            <div class="product-item" data-product-name="Tablet DEF">Tablet DEF</div>
+            <!-- ... y más productos ... -->
+        </section>
+        <br>
+        <h3 style="text-align:center;">Tenemos un Catálogo para cada tipo de productos</h3>
+
+        <section id="products">
+            <div class="product-item">
+                <h3>Tecnología</h3>
+                <img src="img/bombillo0101.jpg" class="responsive">
+                <h5>"Dispositivos e innovaciones de vanguardia" </h5>
+                <a href="https://portafolio.digital/co/catalogo/a30ff714-3db1-47cd-9bf3-64baad0219df" target="_blank">Ver más</a>
+            </div>
+            
+            <div class="product-item">
+                <h3>Fitness y Salud</h3>
+                <img src="img/pesas.jpg" class="responsive">
+                <h5>"Artículos para tu bienestar físico y mental" </h5>
+                <a href="https://portafolio.digital/co/catalogo/a42f7281-63ca-4966-a76e-ce19bba91f2f" target="_blank">Ver más</a>
+            </div>
+        
+            <!-- ... y puedes agregar más productos aquí -->
+        </section>
+    </div>
+
+    <footer>
+        <p>Para más información sobre un producto, contáctanos vía <a href="https://wa.me/message/5G5AZQ4JF6TBJ1">WhatsApp</a>.</p>
+    </footer>
+</body>
+
+</html>
